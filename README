@@ -1,0 +1,14 @@
+Este é uma aplicação exemplo de backend utilizando banco de dados H2 com Spring Boot + Spring MVC + Spring Security (Header Auth Param) + Spring LDAP + Spring Data + Spring TX + Spring Test + Mockito
+
+São usados perfis do Spring Boot. Portanto é necessário criar a seguinte variável de ambiente: "spring.profiles.active" com os possíveis valores: "local" ou "dev"
+
+Para executa-lá faça um mvn clean install para instalar as dependências e depois navegue até o diretório do projeto "view" e execute o comando: "mvn spring-boot:run"
+
+Para executar os testes integrados basta passar o profile de dev:
+mvc clean install -Pdev
+
+
+Ou simplesmente faça:
+mvn clean install -Dskip.integration.tests=false
+
+OBS: É necessario ter um server Ldap (e configurar no application.properties) ou comentar as classes envolvidas neste processo
